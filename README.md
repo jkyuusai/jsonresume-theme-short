@@ -69,7 +69,7 @@ __The theme development can now begin.__
 
 Now that you have your boilerplate theme installed, go through a quick overview of each of the files needed for your JSONResume theme:
 
-* `package.json`: Your package.json is required by all npm packages. Everytime you want to release a new update of your theme, you'll need to update it's version number.
+* `package.json`: Your package.json is required by all npm packages. Everytime you want to release a new update of your theme, you'll need to update its version number.
 * `index.js`: This is the file that will return the needed HTML to the theme server. You can use it to process some things with your theme first, but we'll talk about that a bit later.
 * `resume.template`: This is your actual template. This file is sent to the `index.js` for it to sent to the theme server.
 * `style.css`: This is where all the CSS of your project goes. Since the `index.js` only returns HTML, the contents of this file are put between `<style>` tags in your `resume.template` file.
@@ -90,11 +90,11 @@ Lastly, you can put all of your theme dependencies in the `dependencies` field. 
 
 The `index.js` is where all the compiliing of your theme, and neccessary edits will go.
 
-At the top, you can already see the Node.js `require` function being used with the dependencies. You can obviously add own dependencies, if you are planning on using a different templating system, you can remove it.
+At the top, you can already see the Node.js `require` function being used with the dependencies. You can obviously add your own dependencies. If you are planning on using a different templating system, you can remove it.
 
 The most important part of `index.js` is the `render` function. This is where all the compilation goes. This render function is expected to take a resume object (from a `resume.json`), and should return HTML. In this case, it is returning a compiled Handlebars document. If you removed the Handlebars dependency, you'll want to remove it and replace it with your own templating system compilation.
 
-Above the `return` line are css and template variables. Using the Node.js `fs` module, it reads first the `style.css` and the `resume.template`.
+Above the `return` line are css and template variables. Using the Node.js `fs` module, it first reads `style.css` and `resume.template`.
 
 ### resume.template
 
