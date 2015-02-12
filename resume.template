@@ -10,10 +10,7 @@
 	<style>
 	{{{css}}}
 	</style>
-	<style media="print">
-		body { font-size: 12px; }
-	</style>
-
+	
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
 	
 	</head>
@@ -44,56 +41,12 @@
 			</div>
 		</header>
 
-
 		{{#if summary}}
 		<p>{{summary}}</p>
-		{{/if}}
-
-		{{#if profiles.length}}
-			{{#each profiles}}
-			<div class="profile">
-				{{#if network}}
-				<strong class="network">
-					{{network}}
-				</strong>
-				{{/if}}
-				{{#if username}}
-				<span class="username">
-					{{#if url}}
-					<a href="{{url}}">{{username}}</a>
-					{{else}}
-					{{username}}
-					{{/if}}
-				</span>
-				{{/if}}
-			</div>
-			{{/each}}
-		{{/if}}
+		{{/if}}		
 
 	</section>
-	{{/resume.basics}}
-
-	{{#if resume.skills.length}}
-	<section id="skills">
-		<h2>Skills</h2>
-		{{#each resume.skills}}
-		<div class="item">
-			{{#if name}}
-			<div class="name">
-				{{name}}
-			</div>
-			{{/if}}
-			{{#if keywords.length}}
-			<div class="keywords">
-				{{#each keywords}}
-					{{.}}{{#if @last}}{{else}},{{/if}}
-				{{/each}}
-			</div>
-			{{/if}}
-		</div>
-		{{/each}}
-	</section>
-	{{/if}}
+	{{/resume.basics}}	
 
 	{{#if resume.work.length}}
 	<section class="experience">
@@ -139,6 +92,28 @@
 			</ul>
 			{{/if}}
 		</section>
+		{{/each}}
+	</section>
+	{{/if}}
+
+	{{#if resume.skills.length}}
+	<section id="skills">
+		<h2>Skills</h2>
+		{{#each resume.skills}}
+		<div class="item">
+			{{#if name}}
+			<div class="name">
+				{{name}}
+			</div>
+			{{/if}}
+			{{#if keywords.length}}
+			<div class="keywords">
+				{{#each keywords}}
+					{{.}}{{#if @last}}{{else}},{{/if}}
+				{{/each}}
+			</div>
+			{{/if}}
+		</div>
 		{{/each}}
 	</section>
 	{{/if}}
@@ -327,49 +302,7 @@
 		</div>
 		{{/each}}
 	</section>
-	{{/if}}
-
-	{{#if resume.interests.length}}
-	<section id="interests">
-		<h2>Interests</h2>
-		{{#each resume.interests}}
-		<div class="item">
-			{{#if name}}
-			<div class="name">
-				{{name}}
-			</div>
-			{{/if}}
-			{{#if keywords.length}}
-			<ul class="keywords">
-				{{#each keywords}}
-				<li>{{.}}</li>
-				{{/each}}
-			</ul>
-			{{/if}}
-		</div>
-		{{/each}}
-	</section>
-	{{/if}}
-	
-	{{#if resume.references.length}}
-	<section id="references">
-		<h2>References</h2>
-		{{#each resume.references}}
-		<div class="item">
-			{{#if reference}}
-			<blockquote class="reference">
-				{{reference}}
-			</blockquote>
-			{{/if}}
-			{{#if name}}
-			<div class="name">
-				— {{name}}
-			</div>
-			{{/if}}
-		</div>
-		{{/each}}
-	</section>
-	{{/if}}
+	{{/if}}	
 	
 	</div>
 	
