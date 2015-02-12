@@ -1,11 +1,11 @@
 {
-  "name": "jsonresume-theme-short",
-  "version": "0.1.4",
-  "description": "Simple to the point theme for JSON Resume",
-  "author": "Graeme Maciver",
+  "name": "jsonresume-theme-shorter",
+  "version": "0.0.1",
+  "description": "Absolutely razor thin margins on the print side - shooting for a one page PDF.",
+  "author": "Joshua Skinner",
   "repository": {
     "type": "git",
-    "url": "https://github.com/isnotahippy/jsonresume-theme-short"
+    "url": "https://github.com/jkyyusai/jsonresume-theme-shorter"
   },
   "license": "MIT",
   "dependencies": {
