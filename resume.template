@@ -23,6 +23,11 @@
 		<header>
 			<h1>{{name}}</h1>
 			<div class="contact">
+				<div class ="location">
+					{{#if location}}
+						{{location.city}}, {{location.region}}
+					{{/if}}
+				</div>
 				{{#if email}}
 				<span class="detail">
 					<a href="mailto:{{email}}">{{email}}</a>

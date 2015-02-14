@@ -195,6 +195,11 @@
 		font-weight: 400;
 	}
 
+	.heading header .contact .location {
+		display: inline;
+		margin-right: 1em;
+	}
+
 	.heading header .contact .detail {
 		margin: 0 1em 0 0;
 	}
