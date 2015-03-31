@@ -160,13 +160,14 @@
 	}
 
 	a {
-		color: #2C85B1;
+		color: #000;
 		text-decoration: none;
 		font-weight: 400;
 	}
 	ul {
 		margin-top: 0.2em;
 		margin-bottom: 0;
+		padding-left: 1.6em;
 	}
 
 	blockquote {
@@ -174,7 +175,7 @@
 		margin-bottom: 1em;
 	}
 	#resume {
-		margin: 1.5em 1.2em 1.5em 1.7em;
+		margin: 1.5em 0.9em 1.5em 1em;
 		max-width: 760px;
 	}
 
@@ -217,7 +218,7 @@
 	/* section / line breaks */
 	section h2 {
 		font-size: 140%;
-		margin: 0.3em 0 0.1em 0;
+		margin: 0.3em 0 0.2em 0;
 		text-transform: uppercase;
 		color: #BC1B39;
 		font-weight: 400;
@@ -235,7 +236,7 @@
 	}
 
 	.item header h3 {
-		margin: 0.1em 1em 0.1em 0;
+		margin: 0.15em 1em 0.2em 0;
 		display: inline-block;
 		font-weight: 600;
 	}
@@ -288,5 +289,10 @@
 		vertical-align: top;
 		width: 49.5%;
 		border-bottom: 0;
+	}
+
+	.qualification {
+		display: inline-block;
+		margin: 0.3em 1em 0.2em 0;
 	}
 }

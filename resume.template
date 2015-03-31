@@ -145,9 +145,15 @@
 			</span>
 			{{/if}}
 			{{#if endDate}}
-			<span class="endDate">
-				- {{date endDate}}
-			</span>
+				{{# unless startDate}}
+					<span class="endDate">
+					{{date endDate}}
+					</span>
+				{{else}}
+				<span class="endDate">
+					- {{date endDate}}
+				</span>
+				{{/unless}}			
 			{{else}}
 			<span class="endDate">
 				- Present
@@ -180,24 +186,7 @@
 				{{#if institution}}
 					<h3 class="name">{{institution}}</h3>
 				{{/if}}
-			</header>
-
-			<div class="dates">
-				{{#if startDate}}
-				<span class="startDate">
-					{{date startDate}}
-				</span>
-				{{/if}}
-				{{#if endDate}}
-				<span class="endDate">
-					- {{date endDate}}
-				</span>
-				{{else}}
-				<span class="endDate">
-					- Present
-				</span>
-				{{/if}}
-			</div>
+			</header>			
 
 			<div class="qualification">
 				{{#if studyType}}
@@ -218,6 +207,14 @@
 				</span>
 				{{/if}}
 			</div>
+
+			<span class="dates">	
+				{{#if endDate}}
+				<span class="endDate">
+					{{year endDate}}
+				</span>
+				{{/if}}
+			</span>
 
 		</div>
 		{{/each}}
